@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  genre: MyText
+  rank: 1
+  artist: one
+
+two:
+  name: MyText
+  genre: MyText
+  rank: 1
+  artist: two
