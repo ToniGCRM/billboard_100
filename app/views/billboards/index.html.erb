@@ -1,2 +1,10 @@
-<h1>Billboards#index</h1>
-<p>Find me in app/views/billboards/index.html.erb</p>
+<h1>Billboard Hot 100</h1>
+
+<% @billboards.each do |billboard| %>
+  <%= @billboards.name %>
+
+  <%= link_to 'New', new_billboard_path %>
+  <% end %>
+
+
+
