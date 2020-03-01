@@ -3,7 +3,11 @@
 <% @billboards.each do |billboard| %>
   <%= @billboards.name %>
 
+
   <%= link_to 'New', new_billboard_path %>
+  <%= link_to 'Show', billboard_path(billboard) %>
+  <%= link_to 'Edit', edit_billboard_path(billboard) %>
+  <%= link_to 'Delete', billboard, method: :delete %>
   <% end %>
 
 
