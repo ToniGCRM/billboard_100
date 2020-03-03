@@ -1,13 +1,19 @@
 <h1>Billboard Hot 100</h1>
 
+<ul>
 <% @billboards.each do |billboard| %>
+  <li>
   <%= @billboards.name %>
-
-
+  </li>
+  <br/>
+  </ul>
+  <div id="link_container">
   <%= link_to 'New', new_billboard_path %>
   <%= link_to 'Show', billboard_path(billboard) %>
   <%= link_to 'Edit', edit_billboard_path(billboard) %>
   <%= link_to 'Delete', billboard, method: :delete %>
+  </div>
+  </br>
   <% end %>
 
 
