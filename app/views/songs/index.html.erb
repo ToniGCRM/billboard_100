@@ -4,4 +4,7 @@
   <%= @songs.name %>
 
   <%= link_to 'New', new_song_path %>
+  <%= link_to 'Show', song_path(@songs) %>
+  <%= link_to 'Edit', edit_song_path(@songs) %>
+
   <% end %>
