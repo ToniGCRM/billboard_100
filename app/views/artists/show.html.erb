@@ -1,7 +1,9 @@
 <h1> <%= @billboard.name %> <%= @artist.name %></h1>
 <ul>
 <li>
- List of songs may go here
+ <% @artist.songs.each do |song| %>
+    <%= song.name %>
+  <%end%>
 </li>
 </ul>
 
