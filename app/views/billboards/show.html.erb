@@ -1,11 +1,17 @@
 <h1>Billboards</h1>
 <h4>Name | Genre | No. </h4> 
-<ul>
-<li>
+
 <%= @billboard.name %>
 <%= @billboard.genre %>
 <%= @billboard.number %>
-</li>
-</ul>
+
+<%= link_to 'Create Artist', new_billboard_artist_path(@billboard) %>
+
+
+<% @billboard.artists do |artist| %>
+ <%= artist.name %>
+  <br/>
+  <% end %>
+  <%= link_to 'Show Artist', billboard_artist_path(@billboard) %>
 
 <%= link_to 'Back', billboards_path %>

@@ -4,9 +4,9 @@
 <li>
 <%= @song.name %>
 <%= @song.genre %>
-<%= @song.artist_id %> #want to put related here!!
+
 </li>
 </ul>
-<div id="link_container">
-<%= link_to 'Back', songs_path %>
-</div>
+
+<%= link_to 'Back', artist_songs_path([@artist, @song]) %>
+
