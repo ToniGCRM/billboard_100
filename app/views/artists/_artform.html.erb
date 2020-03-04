@@ -1,11 +1,10 @@
+<h1><%= @artist.id ? 'Edit' : 'New' %></hi>
+<br/>
 <div class = 'form'>
-  <%= form_for @artist do |f| %>
+  <%= form_for [@billboard, @artist] do |f| %>
 
-    <%= f.label :billboard_id %>
-    <%= f.text_field :billboard_id %>
-    
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true  %>
 
     <%= f.submit %>
   <% end %>

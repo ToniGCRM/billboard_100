@@ -1,8 +1,12 @@
 <h1>Songs</h1>
-
+<h4> Name | Genre | Artist
+<ul>
+<li>
 <%= @song.name %>
 <%= @song.genre %>
-<%= @song.artist_id %>
-
-
+<%= @song.artist_id %> #want to put related here!!
+</li>
+</ul>
+<div id="link_container">
 <%= link_to 'Back', songs_path %>
+</div>

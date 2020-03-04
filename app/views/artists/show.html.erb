@@ -1,7 +1,17 @@
-<h1>Artists</h1>
-<h4>Artist Name | </h4> 
+<h1> <%= @billboard.name %> <%= @artist.name %></h1>
+<ul>
+<li>
+ List of songs may go here
+</li>
+</ul>
 
-<%= @artist.name %>
-<%= @artist.billboard_id %>
+<div id="link_container">
 
-<%= link_to 'Back', artists_path %>
+<%= link_to 'Back to Artists', billboard_artists_path(@billboard) %>
+<br/>
+<%= link_to 'Edit', edit_billboard_artist_path(@billboard, @artist) %>
+<br/>
+<%= link_to 'Delete', [@billboard, @artist], method: :delete %>
+<br/>
+<%= link_to 'Songs', artist_songs_path(@artist) %>
+</div>

@@ -1,12 +1,21 @@
 <h1>Billboard Artists</h1>
-
+<%= link_to 'Create Artist', new_billboard_artist_path(@billboard) %>
+<ul>
 <% @artists.each do |artist| %>
-  <%= @artists.name %>
+  <li>
+  <%= link_to artist.name, [@billboard, artist]%>
+  </li>
+  </ul>
+  <br/>
+  <div id="link_container">
 
   <%= link_to 'New', new_artist_path %>
-  <%= link_to 'Show', artist_path(artist) %>
   <%= link_to 'Edit', edit_artist_path(artist) %>
   <%= link_to 'Delete', artist, method: :delete %>
-  
   <% end %>
+  <br/>
+  <br/>
+ 
+  </div>
+ 
 
