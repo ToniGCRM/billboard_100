@@ -1,10 +1,13 @@
-<h1>Billboard Hot 100</h1>
+<div class="container">
+<h1 class='billboardHeader'>Billboard Hot 100</h1>
 
-<ul>
+<tbody>
 <% @billboards.each do |billboard| %>
-  <li>
-  <%= @billboards.name %>
-  </li>
+  <tr>
+  <td><%= @billboards.name %></td>
+  <tr>
+  </tbody>
+  
   <br/>
   </ul>
   <div id="link_container">
@@ -15,6 +18,7 @@
   </div>
   </br>
   <% end %>
+  </div>
 
 
 
