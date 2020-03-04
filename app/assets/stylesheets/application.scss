@@ -25,3 +25,11 @@
 body {
   @extend .blue-grey, .darken-4;
 }
+
+.red_text {
+  @extend .red-text, .lighten-5;
+}
+h1 {
+  @extend .cyan-text, .lighten-2;
+}
+
