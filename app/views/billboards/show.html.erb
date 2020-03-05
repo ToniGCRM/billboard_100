@@ -1,22 +1,30 @@
 <h1>Billboards</h1>
 
-<div class="red_text">
+<h3>
 <%= @billboard.name %>
 <%= @billboard.genre %>
 <%= @billboard.number %>
-</div>
-<%= link_to 'Create Artist', new_billboard_artist_path(@billboard) %>
+</h3>
+<a class="waves-effect waves-light btn" <%= link_to 'Create Artist', new_billboard_artist_path(@billboard) %></a>
+<a class="waves-effect waves-light btn" <%= link_to 'Back', billboards_path %></a>
 <br/>
-<ul>
+<table class="highlight">
+<thead class="cyan-text text-lighten-2">
+<tr>
+  <th> Artist Name </th>
+  <th> Ranked Songs </th>
+  </tr>
+</thead>
+
+<tbody class="red-text text-lighten-2">
+
 <% @billboard.artists.each do |artist| %>
-  <li><%= link_to artist.name, [@billboard, artist] %></li>
+  <tr>
+  <td><%= link_to artist.name, [@billboard, artist] %></td>
+  <td><%= link_to 'Songs', artist_songs_path(artist) %></td>
+  </tr>
 <%end%>
-</ul>
-
-<% @billboard.artists do |artist| %>
- <%= artist.name %>
-  <br/>
-  <% end %>
+</tbody>
+</table>
 
 
-<%= link_to 'Back', billboards_path %>

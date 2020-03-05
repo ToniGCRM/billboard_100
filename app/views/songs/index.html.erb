@@ -1,20 +1,30 @@
 <h1>Songs</h1>
 <br/>
-<ul>
+<table>
+<thead class="cyan-text text-lighten-2">
+<tr>
+  <th> Song Name </th>
+  <th> Rank </th>
+  </tr>
+</thead>
 
+<a class="waves-effect waves-light btn" <%= link_to 'Add new Song', new_artist_song_path(@artist) %></a>
+<a class="waves-effect waves-light btn" <%= link_to 'Back to Artist', billboard_path(@billboard) %></a>
+<br/>
+<br/>
+
+<tbody class="red-text text-lighten-2">
 <% @songs.each do |song| %>
-  <li>
-  <%= link_to song.name, artist_song_path(@artist, song) %>
-  </li>
+  <tr>
+  <td><%= link_to song.name, artist_song_path(@artist, song) %></td>
+  <td><%= song.rank %></td>
+  </tr>
   <% end %>
-  </ul>
+  </tbody>
+  </table>
+ 
+ 
+  
   <br/>
-  <div id="link_container">
-  <%= link_to 'New', new_artist_song_path(@artist) %>
-  <%= link_to 'Artist', billboard_artist_path(@artist) %>
-
-
-  </div>
-
-
+ 
 

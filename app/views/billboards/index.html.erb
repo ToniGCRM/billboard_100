@@ -1,24 +1,27 @@
 
 <h1 class='billboardHeader'>Billboard Hot 100</h1>
+  <table class="highlight">
+  <thead class="cyan-text text-lighten-2">
+    <tr>
+        <th>Name</th>
+        <th>Create New</th>
+        <th>Show Billboard</th>
+        <th>Edit Billboard</th>
+        <th>Delete Billboard</th>
+    </tr>
+  </thead>
 
-<tbody>
-<% @billboards.each do |billboard| %>
-  <tr>
-  <td><%= @billboards.name %></td>
-  <tr>
-  </tbody>
-  
-  <br/>
-  </ul>
-  <div id="link_container">
-  <%= link_to 'New', new_billboard_path %>
-  <%= link_to 'Show', billboard_path(billboard) %>
-  <%= link_to 'Edit', edit_billboard_path(billboard) %>
-  <%= link_to 'Delete', billboard, method: :delete %>
-  </div>
-  </br>
-  <% end %>
-
-
+  <tbody class="red-text text-lighten-2">
+  <% @billboards.each do |billboard| %>
+    <tr>
+    <td><%= @billboards.name %></td>
+    <td><%= link_to 'New', new_billboard_path %></td>
+    <td><%= link_to 'Show', billboard_path(billboard) %></td>
+    <td><%= link_to 'Edit', edit_billboard_path(billboard) %></td>
+    <td><%= link_to 'Delete', billboard, method: :delete %></td>
+    </tr>
+    <%end%>
+    </tbody>
+</table>
 
 
